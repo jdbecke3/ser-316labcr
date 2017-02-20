@@ -38,7 +38,8 @@ class ServerSolution implements AccountServer {
 			if (in != null) {
 				try {
 					in.close();
-				} catch (Throwable t) {
+				} 
+                catch (Throwable t) {
 					t.printStackTrace();
 				}
 			}
@@ -54,15 +55,18 @@ class ServerSolution implements AccountServer {
 		if ("Checking".equals(type)) {
 			acc = new Checking(name, balance);
 
-		} else if ("Savings".equals(type)) {
+		}
+        else if ("Savings".equals(type)) {
 			acc = new Savings(name, balance);
 
-		} else {
+		}
+        else {
 			throw new IllegalArgumentException("Bad account type:" + type);
 		}
 		try {
 			accountMap.put(acc.getName(), acc);
-		} catch (Exception exc) {
+		}
+        catch (Exception exc) {
 			return false;
 		}
 		return true;
@@ -113,10 +117,12 @@ class ServerSolution implements AccountServer {
 			for (int i=0; i < accountMap.size(); i++) {
 				out.writeObject(accountMap.get(i));
 			}
-		} catch (Exception e) {
+		} 
+        catch (Exception e) {
 			e.printStackTrace();
 			throw new IOException("Could not write file:" + fileName);
-		} finally {
+		} 
+        finally {
 			if (out != null) {
 				try {
 					out.close();
