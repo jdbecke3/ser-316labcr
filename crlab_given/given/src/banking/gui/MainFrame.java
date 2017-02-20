@@ -36,6 +36,7 @@ class MainFrame extends JFrame {
 
 		FileInputStream fis = null; 
 		try {
+			System.out.println(propertyFile);
 			fis =  new FileInputStream(propertyFile);
 			props.load(fis);
 			fis.close();

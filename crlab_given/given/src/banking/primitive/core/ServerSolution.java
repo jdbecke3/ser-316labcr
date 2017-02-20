@@ -3,6 +3,7 @@ package banking.primitive.core;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.HashMap;
 import java.io.*;
 
@@ -110,9 +111,17 @@ class ServerSolution implements AccountServer {
 			out = new ObjectOutputStream(new FileOutputStream(fileName));
 
 			out.writeObject(Integer.valueOf(accountMap.size()));
-			for (int i=0; i < accountMap.size(); i++) {
-				out.writeObject(accountMap.get(i));
+			//insert new code
+			Set<String> keys = accountMap.keySet();		// get keys from map
+			for(String key : keys) 						// get one key from the set of keys
+			{
+				out.writeObject(accountMap.get(key));	// write one value to file
 			}
+			//end of new Code
+			/* Old Code
+			 * for (int i=0; i < accountMap.size(); i++) {
+			 * out.writeObject(accountMap.get(i));
+			}*/
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new IOException("Could not write file:" + fileName);
