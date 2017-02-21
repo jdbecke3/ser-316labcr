@@ -6,8 +6,7 @@ public class Savings extends Account {
 	/**
   Method:Savings
   Inputs:name 
-  Returns:Savings account object name 
-
+  Returns:Savings account object name
   Description: Savings creates a Savings object with the given name
 */
 	public Savings(String name) {

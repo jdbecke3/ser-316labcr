@@ -8,7 +8,6 @@ public class Checking extends Account {
   Method:Checking
   Inputs: name of the account
   Returns:A checking account object
-
   Description: Creates a checking account with the given name
 */
 	private Checking(String name) {
@@ -18,7 +17,6 @@ public class Checking extends Account {
   Method:createChecking
   Inputs:Name
   Returns:Checking account object
-
   Description: Creates checking account with the given name.
 */
     public static Checking createChecking(String name) {
