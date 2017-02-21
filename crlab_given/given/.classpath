@@ -4,5 +4,11 @@
 
 	<classpathentry kind="lib" path="jars/junit-4.10.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+
+
+	<classpathentry kind="lib" path="jars/junit-4.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin1"/>
+
 </classpath>
