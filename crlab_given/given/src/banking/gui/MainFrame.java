@@ -2,6 +2,7 @@
 package banking.gui;
 
 import banking.primitive.core.Account;
+
 import banking.primitive.core.AccountServer;
 import banking.primitive.core.AccountServerFactory;
 
@@ -136,7 +137,11 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 
-			if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Account not created!\nAmount must be a number");
+			}
+			else if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Account created successfully");
 			}
             else {
@@ -151,9 +156,9 @@ class MainFrame extends JFrame {
 			try {
 				myServer.saveAccounts();
 				JOptionPane.showMessageDialog(null, "Accounts saved");
-			} 
-            catch (IOException exc) {
-				JOptionPane.showMessageDialog(null, "Error saving accounts");
+			}
+			catch (IOException exc) {
+        JOptionPane.showMessageDialog(null, "Error saving accounts");
 			}
 		}
 	}
@@ -164,11 +169,16 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
-			if (acc != null && acc.deposit(Float.parseFloat(balance))) {
+			//New Code
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Deposit unsuccessful:\nAmount must be a number");
+			}
+			else if (acc != null && acc.deposit(Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Deposit successful");
-			} 
-            else {
-				JOptionPane.showMessageDialog(null, "Deposit unsuccessful");
+			}
+			else {
+        JOptionPane.showMessageDialog(null, "Deposit unsuccessful");
 			}		
 		}
 	}
@@ -178,9 +188,14 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
-			if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful:\nAmount must be a number");
+			}
+			else if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Withdrawal successful");
 			} 
+
             else {
 				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful");
 			}		
@@ -197,7 +212,7 @@ class MainFrame extends JFrame {
 		}
 	}
 }
-=======
+
 
 
 package banking.gui;
@@ -349,7 +364,11 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 
-			if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Account not created!\nAmount must be a number");
+			}
+			else if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Account created successfully");
 			} else {
 				JOptionPane.showMessageDialog(null, "Account not created!");
@@ -363,7 +382,8 @@ class MainFrame extends JFrame {
 			try {
 				myServer.saveAccounts();
 				JOptionPane.showMessageDialog(null, "Accounts saved");
-			} catch (IOException exc) {
+			} 
+			catch (IOException exc) {
 				JOptionPane.showMessageDialog(null, "Error saving accounts");
 			}
 		}
@@ -375,9 +395,15 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
-			if (acc != null && acc.deposit(Float.parseFloat(balance))) {
+			//New Code
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Deposit unsuccessful:\nAmount must be a number");
+			}
+			else if (acc != null && acc.deposit(Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Deposit successful");
-			} else {
+			} 
+			else {
 				JOptionPane.showMessageDialog(null, "Deposit unsuccessful");
 			}		
 		}
@@ -388,9 +414,15 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
-			if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful:\nAmount must be a number");
+			}
+			else if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Withdrawal successful");
-			} else {
+			} 
+
+			else {
 				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful");
 			}		
 		}
@@ -405,8 +437,22 @@ class MainFrame extends JFrame {
 			System.exit(0);
 		}
 	}
+	
+	/**
+	  Method: isNumeric
+	  Inputs: String
+	  Returns: boolean
+
+	  Description: will return true if the string can be
+	  			   converted to a number and false if it
+	  			   cannot.
+	*/
+	public boolean isNumeric(String str)
+	{
+	  return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
+	}
 }
-=======
+
 
 /**
   File:MainFrame.java	
@@ -567,7 +613,11 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 
-			if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Account not created!\nAmount must be a number");
+			}
+			else if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Account created successfully");
 			} else {
 				JOptionPane.showMessageDialog(null, "Account not created!");
@@ -581,7 +631,8 @@ class MainFrame extends JFrame {
 			try {
 				myServer.saveAccounts();
 				JOptionPane.showMessageDialog(null, "Accounts saved");
-			} catch (IOException exc) {
+			} 
+			catch (IOException exc) {
 				JOptionPane.showMessageDialog(null, "Error saving accounts");
 			}
 		}
@@ -593,9 +644,15 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
-			if (acc != null && acc.deposit(Float.parseFloat(balance))) {
+			//New Code
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Deposit unsuccessful:\nAmount must be a number");
+			}
+			else if (acc != null && acc.deposit(Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Deposit successful");
-			} else {
+			} 
+			else {
 				JOptionPane.showMessageDialog(null, "Deposit unsuccessful");
 			}		
 		}
@@ -606,9 +663,14 @@ class MainFrame extends JFrame {
 			String name = nameField.getText();
 			String balance = balanceField.getText();
 			Account acc = myServer.getAccount(name);
-			if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
+			if(!isNumeric(balance))
+			{
+				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful:\nAmount must be a number");
+			}
+			else if (acc != null && acc.withdraw(Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Withdrawal successful");
-			} else {
+			} 
+			else {
 				JOptionPane.showMessageDialog(null, "Withdrawal unsuccessful");
 			}		
 		}
@@ -622,6 +684,20 @@ class MainFrame extends JFrame {
 
 			System.exit(0);
 		}
+	}
+	
+	/**
+	  Method: isNumeric
+	  Inputs: String
+	  Returns: boolean
+
+	  Description: will return true if the string can be
+	  			   converted to a number and false if it
+	  			   cannot.
+	*/
+	public boolean isNumeric(String str)
+	{
+	  return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
 	}
 }
 
