@@ -1,12 +1,16 @@
-/*
+
+/**
   File:Main.java	
   Author:Kevin Gary
   Date:02/20/2017	
-  
-  Description:Main.java contains the main method for hte program
-*/
-package banking.gui;
+**/
+  package banking.gui;
+/**
+  Class:Main
 
+  
+  Description:Contains the main method
+*/
 import javax.swing.JFrame;
 
 /**

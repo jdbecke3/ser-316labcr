@@ -1,3 +1,4 @@
+
 /*
   File:ServerSolution.java	
   Author:Kevin Gary
@@ -5,22 +6,34 @@
   
   Description: ServerSolution.java contains the ServerSolution class which saves and loads accounts
 */
+
 package banking.primitive.core;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.HashMap;
 import java.io.*;
 
 import banking.primitive.core.Account.State;
-
+/**
+  Class:ServerSolution 
+  
+  Description: Serializes account objects to and from a .ser file
+*/
 class ServerSolution implements AccountServer {
 
 	static String fileName = "accounts.ser";
 
 	Map<String,Account> accountMap = null;
+	/**
+	Method:ServerSolution
+	Inputs:none
+	Returns: ServerSolution object
 
+	Description: Reads from a .ser file and loads the account objects in to a hash map 
+	*/
 	public ServerSolution() {
 		accountMap = new HashMap<String,Account>();
 		File file = new File(fileName);
@@ -51,7 +64,13 @@ class ServerSolution implements AccountServer {
 			}
 		}
 	}
-	
+/**
+  Method:newAccountFactory
+  Inputs:String type,String name,float balance
+  Returns:boolean telling whether the account was created or not
+
+  Description: Checks that the account already exists and if not discerns which type of accoutn is being created and creates it
+*/
 	private boolean newAccountFactory(String type, String name, float balance)
 		throws IllegalArgumentException {
 		
@@ -74,7 +93,14 @@ class ServerSolution implements AccountServer {
 		}
 		return true;
 	}
+	/**
+	Method:newAccount
+	Inputs:type,name,balance
+	Returns: boolean 
 
+	Description:Creates a new account with the corresponding values
+	*/
+	
 	public boolean newAccount(String type, String name, float balance) 
 		throws IllegalArgumentException {
 		
@@ -82,7 +108,13 @@ class ServerSolution implements AccountServer {
 		
 		return newAccountFactory(type, name, balance);
 	}
-	
+	/**
+	Method:closeAccount
+	Inputs:name 
+	Returns:boolean saying if the account was closed
+
+	Description:Finds the account with the given name and tells whether the closing was succesful
+	*/
 	public boolean closeAccount(String name) {
 		Account acc = accountMap.get(name);
 		if (acc == null) {
@@ -91,7 +123,7 @@ class ServerSolution implements AccountServer {
 		acc.setState(State.CLOSED);
 		return true;
 	}
-
+	
 	public Account getAccount(String name) {
 		return accountMap.get(name);
 	}
@@ -110,16 +142,30 @@ class ServerSolution implements AccountServer {
 		}
 		return result;
 	}
-	
+	/**
+	Method:saveAccounts
+	Inputs:none
+	Returns:none
+
+	Description: Serializes all accounts to a .ser file
+	*/
 	public void saveAccounts() throws IOException {
 		ObjectOutputStream out = null; 
 		try {
 			out = new ObjectOutputStream(new FileOutputStream(fileName));
 
 			out.writeObject(Integer.valueOf(accountMap.size()));
-			for (int i=0; i < accountMap.size(); i++) {
-				out.writeObject(accountMap.get(i));
+			//insert new code
+			Set<String> keys = accountMap.keySet();		// get keys from map
+			for(String key : keys) 						// get one key from the set of keys
+			{
+				out.writeObject(accountMap.get(key));	// write one value to file
 			}
+			//end of new Code
+			/* Old Code
+			 * for (int i=0; i < accountMap.size(); i++) {
+			 * out.writeObject(accountMap.get(i));
+			}*/
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new IOException("Could not write file:" + fileName);

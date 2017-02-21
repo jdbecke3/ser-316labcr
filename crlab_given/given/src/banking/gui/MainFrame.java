@@ -1,12 +1,16 @@
-/*
+
+/**
   File:MainFrame.java	
   Author:Kevin Gary
   Date:02/20/2017
-  
-  Description: MainFrame.java contains the MainFrame class which sets up the JFrame for the application.
-*/
+**/
 package banking.gui;
+/**
+  Class:	MainFrame 
 
+  
+  Description:Creates the gui for the application
+*/
 import banking.primitive.core.Account;
 import banking.primitive.core.AccountServer;
 import banking.primitive.core.AccountServerFactory;
@@ -34,6 +38,13 @@ class MainFrame extends JFrame {
 	JButton			displayAccountsButton;
 	JButton			displayODAccountsButton;
 
+	/**
+  Method:MainFrame
+  Inputs:propertyFile string giving the name of a property file
+  Returns: returns a MainFrame object
+
+  Description:Creates a MainFrame object which creates the gui
+*/
 	public MainFrame(String propertyFile) throws IOException {
 
 		//** initialize myServer
@@ -43,6 +54,7 @@ class MainFrame extends JFrame {
 
 		FileInputStream fis = null; 
 		try {
+			System.out.println(propertyFile);
 			fis =  new FileInputStream(propertyFile);
 			props.load(fis);
 			fis.close();
@@ -53,7 +65,13 @@ class MainFrame extends JFrame {
 		constructForm();
 	}
 
-	
+	/**
+  Method:constructForm
+  Inputs:none
+  Returns:none
+
+  Description:Creates the gui components contained in the MainFrame
+*/
 	private void constructForm() {
 		//*** Make these read from properties
 		typeLabel		= new JLabel(props.getProperty("TypeLabel"));

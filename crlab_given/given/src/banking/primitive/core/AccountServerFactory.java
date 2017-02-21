@@ -1,3 +1,4 @@
+
 /*
   File:AccountServerFactory.java	
   Author:Kevin Gary
@@ -5,9 +6,15 @@
   
   Description: AccountServerFactory.java contains the AccountServerFactory class.
 */
+
+
 package banking.primitive.core;
 
-
+/**
+  Class:	AccountServerFactory
+  
+  Description: A class that creates an AccountServerFactory and ensures its singleton
+*/
 public class AccountServerFactory {
 
 	protected static AccountServerFactory singleton = null;
