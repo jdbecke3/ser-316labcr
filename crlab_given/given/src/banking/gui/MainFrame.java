@@ -270,7 +270,8 @@ class MainFrame extends JFrame {
 			fis =  new FileInputStream(propertyFile);
 			props.load(fis);
 			fis.close();
-		} catch (IOException ioe) {
+		} 
+        catch (IOException ioe) {
 			ioe.printStackTrace();
 			throw ioe;
 		}
@@ -349,7 +350,8 @@ class MainFrame extends JFrame {
 			List<Account> accounts = null;
 			if (e.getSource() == displayAccountsButton) {
 				accounts = myServer.getActiveAccounts();
-			} else {
+			} 
+            else {
 				accounts = myServer.getAllAccounts();
 			}
 			StringBuffer sb = new StringBuffer();
@@ -376,7 +378,8 @@ class MainFrame extends JFrame {
 			}
 			else if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Account created successfully");
-			} else {
+			} 
+            else {
 				JOptionPane.showMessageDialog(null, "Account not created!");
 			}
 		}
@@ -519,7 +522,8 @@ class MainFrame extends JFrame {
 			fis =  new FileInputStream(propertyFile);
 			props.load(fis);
 			fis.close();
-		} catch (IOException ioe) {
+		} 
+        catch (IOException ioe) {
 			ioe.printStackTrace();
 			throw ioe;
 		}
@@ -598,7 +602,8 @@ class MainFrame extends JFrame {
 			List<Account> accounts = null;
 			if (e.getSource() == displayAccountsButton) {
 				accounts = myServer.getActiveAccounts();
-			} else {
+			} 
+            else {
 				accounts = myServer.getAllAccounts();
 			}
 			StringBuffer sb = new StringBuffer();
@@ -625,7 +630,8 @@ class MainFrame extends JFrame {
 			}
 			else if (myServer.newAccount(type, name, Float.parseFloat(balance))) {
 				JOptionPane.showMessageDialog(null, "Account created successfully");
-			} else {
+			} 
+            else {
 				JOptionPane.showMessageDialog(null, "Account not created!");
 			}
 		}
