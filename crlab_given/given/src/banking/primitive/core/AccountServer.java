@@ -1,4 +1,10 @@
-
+/*
+  File:Account:AccountServer.java	
+  Author:Kevin Gary
+  Date:02/20/2017
+  
+  Description: Contains the AccountServer interface used by account server factory
+*/
 package banking.primitive.core;
 
 import java.io.IOException;

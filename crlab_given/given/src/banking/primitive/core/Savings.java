@@ -1,4 +1,10 @@
-
+/*
+  File:Account:Savings.java	
+  Author:Kevin Gary
+  Date:02/20/2017
+  
+  Description: Contains the Saving class which represents a Savings account
+*/
 package banking.primitive.core;
 
 public class Savings extends Account {
@@ -22,6 +28,9 @@ public class Savings extends Account {
 			if (balance >= 0.0f) {
 				setState(State.OPEN);
 			}
+			//insert new Code
+			return true;
+			//end of new Code
 		}
 		return false;
 	}
@@ -260,7 +269,7 @@ public class Savings extends Account {
 		return false;
 	}
 	
-	public String getType() { return "Checking"; }
+	public String getType() { return "Savings"; }
 
 	public String toString() {
 		return "Savings: " + getName() + ": " + getBalance();
