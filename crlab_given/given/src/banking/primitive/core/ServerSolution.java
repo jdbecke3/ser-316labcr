@@ -87,6 +87,7 @@ class ServerSolution implements AccountServer {
 
 	Description:Creates a new account with the corresponding values
 	*/
+	
 	public boolean newAccount(String type, String name, float balance) 
 		throws IllegalArgumentException {
 		
