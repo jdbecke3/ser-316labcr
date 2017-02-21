@@ -1,10 +1,3 @@
-/*
-  File:AccountServer.java	
-  Author:Alec Shinn
-  Date:02/20/2017	
-  
-  Description:AccountServer.java is an interface for an AccountServer
-*/
 package banking.primitive.core;
 
 import java.io.IOException;
