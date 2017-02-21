@@ -30,6 +30,7 @@ public abstract class Account implements java.io.Serializable {
 
     /**
      * @return balance in the Account
+	 *
      */
     public final float getBalance() {
         return balance;
