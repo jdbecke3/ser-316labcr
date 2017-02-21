@@ -3,6 +3,7 @@
   File:Main.java	
   Author:Kevin Gary
   Date:02/20/2017	
+  Description: Contains the main method of the program
 **/
   package banking.gui;
 /**

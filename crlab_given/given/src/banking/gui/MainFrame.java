@@ -1,4 +1,10 @@
-
+/*
+  File:MainFrame.java	
+  Author:Kevin Gary
+  Date:02/20/2017
+  
+  Description: Contains the MainFrame class to create the gui.
+*/
 package banking.gui;
 
 import banking.primitive.core.Account;
