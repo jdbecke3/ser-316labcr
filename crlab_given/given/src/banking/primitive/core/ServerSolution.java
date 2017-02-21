@@ -1,3 +1,12 @@
+
+/*
+  File:ServerSolution.java	
+  Author:Kevin Gary
+  Date:	02/20/2017
+  
+  Description: ServerSolution.java contains the ServerSolution class which saves and loads accounts
+*/
+
 package banking.primitive.core;
 
 import java.util.ArrayList;

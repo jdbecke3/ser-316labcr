@@ -1,9 +1,16 @@
+
+/**
+  File:Account.java	
+  Author:Kevin Gary
+  Date:02/20/2017
+**/
 package banking.primitive.core;
 /**
   Class:Account 	
+
   
   Description: An abstract class to represent a general account
-*/
+**/
 public abstract class Account implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 

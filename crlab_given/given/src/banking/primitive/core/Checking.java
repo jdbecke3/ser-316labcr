@@ -1,6 +1,13 @@
+
+/*
+  File:Checking.java	
+  Author:Kevin Gary
+  Date:02/20/2017
+*/
 package banking.primitive.core;
 /**
   Class:	Checking 
+
   
   Description:Represents a checking account
 */

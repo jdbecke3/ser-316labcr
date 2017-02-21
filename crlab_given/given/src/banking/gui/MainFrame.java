@@ -1,6 +1,13 @@
+
+/**
+  File:MainFrame.java	
+  Author:Kevin Gary
+  Date:02/20/2017
+**/
 package banking.gui;
 /**
   Class:	MainFrame 
+
   
   Description:Creates the gui for the application
 */
