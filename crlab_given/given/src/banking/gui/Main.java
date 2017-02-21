@@ -1,10 +1,3 @@
-/*
-  File:Main.java	
-  Author:Alec Shinn	
-  Date:02/20/2017	
-  
-  Description:Main.java contains the main method for hte program
-*/
 package banking.gui;
 /**
   Class:Main
