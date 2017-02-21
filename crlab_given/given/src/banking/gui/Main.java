@@ -1,5 +1,9 @@
 package banking.gui;
-
+/**
+  Class:Main
+  
+  Description:Contains the main method
+*/
 import javax.swing.JFrame;
 
 /**
