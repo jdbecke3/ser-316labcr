@@ -1,6 +1,6 @@
 /*
   File:MainFrame.java	
-  Author:Alec Shinn	
+  Author:Kevin Gary
   Date:02/20/2017
   
   Description: MainFrame.java contains the MainFrame class which sets up the JFrame for the application.

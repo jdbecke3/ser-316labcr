@@ -1,6 +1,6 @@
 /*
   File:Savings.java	
-  Author:Alec Shinn	
+  Author:Kevin Gary
   Date:02/20/2017	
   
   Description:Savings.java contains the Savings class which represents a Savings account

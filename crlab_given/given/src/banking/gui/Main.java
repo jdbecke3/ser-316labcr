@@ -1,6 +1,6 @@
 /*
   File:Main.java	
-  Author:Alec Shinn	
+  Author:Kevin Gary
   Date:02/20/2017	
   
   Description:Main.java contains the main method for hte program

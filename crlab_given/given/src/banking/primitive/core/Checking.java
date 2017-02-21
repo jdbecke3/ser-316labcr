@@ -1,6 +1,6 @@
 /*
   File:Checking.java	
-  Author:Alec Shinn
+  Author:Kevin Gary
   Date:02/20/2017
   
   Description:Checking.java contains the Checking class which represents a Checkings account
