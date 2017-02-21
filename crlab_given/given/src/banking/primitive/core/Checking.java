@@ -1,4 +1,10 @@
-
+/*
+  File:Checking.java
+  Author:Kevin Gary
+  Date:02/20/2017
+  
+  Description: Contains the Checking class that represents a checking account
+*/
 package banking.primitive.core;
 
 public class Checking extends Account {
