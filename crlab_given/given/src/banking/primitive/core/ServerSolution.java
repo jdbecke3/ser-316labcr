@@ -135,6 +135,7 @@ class ServerSolution implements AccountServer {
 	}
 
 }
+=======
 
 package banking.primitive.core;
 
