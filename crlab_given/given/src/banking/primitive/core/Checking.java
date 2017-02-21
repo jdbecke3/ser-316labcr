@@ -4,15 +4,33 @@ public class Checking extends Account {
 
 	private static final long serialVersionUID = 11L;
 	private int numWithdraws = 0;
-	
+	/**
+  Method:Checking
+  Inputs: name of the account
+  Returns:A checking account object
+
+  Description: Creates a checking account with the given name
+*/
 	private Checking(String name) {
 		super(name);
 	}
+	/**
+  Method:createChecking
+  Inputs:Name
+  Returns:Checking account object
 
+  Description: Creates checking account with the given name.
+*/
     public static Checking createChecking(String name) {
         return new Checking(name);
     }
+	/**
+  Method:Checking
+  Inputs:name and balance
+  Returns:Creates a checking account object with the given values
 
+  Description:
+*/
 	public Checking(String name, float balance) {
 		super(name, balance);
 	}
