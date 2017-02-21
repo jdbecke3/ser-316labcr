@@ -40,8 +40,8 @@ public interface AccountServer {
 	public List<Account> getActiveAccounts();
 
 	/** 
-	 * Saves the state of the server
-	 * @throws IOException if unable to save the state
+	 * Saves the State of the server
+	 * @throws IOException if unable to save the State
 	 */
 	public void	saveAccounts() throws IOException;
 }

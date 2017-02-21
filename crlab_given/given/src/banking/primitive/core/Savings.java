@@ -1,7 +1,7 @@
 package banking.primitive.core;
 
 public class Savings extends Account {
-	private static final long serialVersionUID = 111L;
+	private static final long SERIALVERSIONUID = 111L;
 	private int numWithdraws = 0;
 	/**
   Method:Savings
@@ -45,7 +45,7 @@ public class Savings extends Account {
 	 *Inputs: amount to withdraw
 	 *Return: boolean telling whether the withrdraw was succesful or not
 	 * A withdrawal. After 3 withdrawals a fee of $1 is added to each withdrawal.
-	 * An account whose balance dips below 0 is in an OVERDRAWN state
+	 * An account whose balance dips below 0 is in an OVERDRAWN State
 	 */
 	public boolean withdraw(float amount) {
 		if (getState() == State.OPEN && amount > 0.0f) {
