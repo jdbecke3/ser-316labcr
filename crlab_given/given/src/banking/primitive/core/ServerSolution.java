@@ -7,7 +7,11 @@ import java.util.HashMap;
 import java.io.*;
 
 import banking.primitive.core.Account.State;
-
+/**
+  Class:ServerSolution 
+  
+  Description: Serializes account objects to and from a .ser file
+*/
 class ServerSolution implements AccountServer {
 
 	static String fileName = "accounts.ser";

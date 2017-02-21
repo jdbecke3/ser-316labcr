@@ -1,5 +1,9 @@
 package banking.primitive.core;
-
+/**
+  Class:	Savings
+  
+  Description: Represents a Savings account
+*/
 public class Savings extends Account {
 	private static final long serialVersionUID = 111L;
 	private int numWithdraws = 0;

@@ -1,5 +1,9 @@
 package banking.gui;
-
+/**
+  Class:	MainFrame 
+  
+  Description:Creates the gui for the application
+*/
 import banking.primitive.core.Account;
 import banking.primitive.core.AccountServer;
 import banking.primitive.core.AccountServerFactory;
