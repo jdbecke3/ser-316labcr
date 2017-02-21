@@ -1,7 +1,7 @@
 package banking.primitive.core;
 
 public class Savings extends Account {
-	private static final long serialVersionUID = 111L;
+	static final long serialVersionUID = 111L;
 	private int numWithdraws = 0;
 	/**
   Method:Savings
