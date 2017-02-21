@@ -18,7 +18,13 @@ package banking.primitive.core;
 public class AccountServerFactory {
 
 	protected static AccountServerFactory singleton = null;
+    /**
+    Method:AccountServerFactory
+    Inputs:none
+    Returns: AccountServerFactory object
 
+    Description: returns a new AccountServerFactory object
+    */
 	protected AccountServerFactory() {
 
 	}
@@ -30,7 +36,13 @@ public class AccountServerFactory {
 
 		return singleton;
 	}
+	/**
+    Method:lookup
+    Inputs:none
+    Returns: AccountServer
 
+    Description: returns a new ServerSolution
+    */
 	public AccountServer lookup() {
 		return new ServerSolution();
 	}
